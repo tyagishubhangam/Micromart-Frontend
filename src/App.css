@@ -1,0 +1,52 @@
+*{
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;  
+  
+}
+html, body{
+  height: 100%;
+}
+
+.myPage{
+  font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* grid-template-columns: ; */
+}
+
+header{
+  display: flex;
+  width: 100%;
+  background-color: red;
+  height: 4rem;
+  align-items: center;
+  
+}
+
+.content{
+  display: flex;
+  /* height: 88vh;
+   */
+   flex: 1;
+  
+}
+
+aside{
+  flex: .5;
+  padding: 20px;
+  background-color: rgb(23, 174, 216);
+}
+main{
+  flex: 3;
+  padding: 20px;
+  background-color: pink;
+}
+footer{
+  text-align: center;
+  background-color: blanchedalmond;
+  height: fit-content;
+}
