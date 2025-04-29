@@ -1,20 +1,21 @@
 import "./App.css";
-import Header from "./components/header_components/Header.jsx";
+import Navbar from "./components/Navbar/Navbar";
+import { Routes, Route } from "react-router";
+import Home from "./Pages/Homepage/Home";
+
+
 
 const App = ()=>{
     return(
-        <div className="myPage">
-        <header>
-       <Header />
-        </header>
-        <div className="content">
-        <aside>Aside</aside>
-        <main>Main</main>
-        </div>
         
-
-        <footer>Footer</footer>
-        </div>
+        <>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/categories" element={<Categories />} />
+          <Route path="/featured" element={<Featured />} /> */}
+        </Routes>
+      </>
     )
 }
 
