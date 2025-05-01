@@ -82,6 +82,9 @@ font-family: Montserrat; /* Heading */
   border-style: solid; 
   gap: 6px; 
 }
+.nav-right a{
+    text-decoration: none;
+}
 
 .nav-right .typ1-btn:hover {
     color: #F46B9DFF; /* primary-550 */

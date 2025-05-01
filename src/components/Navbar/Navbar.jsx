@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import logo from "/logo.svg";
-import { NavLink } from "react-router";
+import { NavLink,Link } from "react-router";
 
 const Navbar = () => {
   return (
@@ -24,10 +24,11 @@ const Navbar = () => {
       </div>
 
       <div className="nav-right">
-        <button className="typ1-btn">
+        
+        <Link to="/signup"><button className="typ1-btn">
           <span className="material-symbols-outlined">person_add</span>
           Signup
-        </button>
+        </button></Link>
         <button className="typ2-btn">
           <span className="material-symbols-outlined">login</span>
           Login
