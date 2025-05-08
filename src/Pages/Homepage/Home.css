@@ -23,3 +23,6 @@
     /* justify-content: space-around; */
     background-color: #f9f9f9;
 }
+.link-no-style{
+  text-decoration: none;
+}

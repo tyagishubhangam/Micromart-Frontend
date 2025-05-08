@@ -1,30 +1,40 @@
+import { Link, useParams } from "react-router";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import { getProducts } from "../../services/ProductService.js"; // Import the service
 import "./Home.css";
 import {useState, useEffect} from "react";
 const Home = ()=>{
     const [products, setProducts] = useState([]);
-
+    const { category } = useParams();
+    console.log(category,"hello");
     useEffect(() => {
-        // Fetch product data when the component mounts
         const fetchProducts = async () => {
-            const productData = await getProducts();
-            setProducts(productData);
+          let productData = [];
+          if (category) {
+            productData = await getProducts(category);
+          } else {
+            productData = await getProducts();
+          }
+          setProducts(productData);
         };
-        
+      
         fetchProducts();
-    }, []); // Empty dependency array ensures this runs only once
+      }, [category]); // 👈 this makes the effect re-run when categoryId changes
+      
     return(
         <div className="homepage">
             <div className="heading">Featured Products</div>
             <div className="products-catalogue">
             {products.map((product, index) => (
-                    <ProductCard
+                   <Link to={`/product/${product.id}`} key={product.id} className="link-no-style" > 
+                   <ProductCard
                         key={index}
                         name={product.name}
                         rating={product.rating}
                         price={product.price}
+                        image={product.image}
                     />
+                    </Link>
                 ))}
 
             </div>

@@ -1,0 +1,96 @@
+.addProduct-page {
+    min-height: 100vh;
+    background-image: url('/bg2.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px; */
+  }
+
+
+
+.data-form {
+  padding: 0 210px 0 210px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 480px;  */
+  height: 100vh; 
+  
+  font-family: Poppins; 
+  background: rgb(255, 255, 255); /* neutral-200 */
+  border-radius: 6px; /* border-m */
+  border-width: 0px; 
+}
+
+.data-form .heading{
+    font-family: Montserrat; /* Heading */
+  font-size: 40px; 
+  line-height: 56px; 
+  font-weight: 700; 
+  color: #000000FF; 
+}
+
+.form-inputs{
+  
+    display: flex;
+    flex-direction: column; /* make label and input stack vertically */
+    gap: 3px;
+    width: 100%; /* ensures inputs align and take full width */
+    margin-bottom: 10px;
+  
+  
+}
+
+.form-inputs input, textarea{
+  width: 480px; 
+  height: 44px; 
+  padding-left: 14px; 
+  padding-right: 16px; 
+  font-family: Poppins; 
+  font-size: 16px; 
+  line-height: 26px; 
+  font-weight: 400; 
+  background: #F3F4F6FF; /* neutral-200 */
+  border-radius: 6px; /* border-m */
+  border-width: 0px; 
+  outline: none; 
+}
+
+ .data-form button{
+  width: 480px; 
+  height: 44px; 
+  padding: 0 16px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  font-family: Poppins; 
+  font-size: 16px; 
+  line-height: 26px; 
+  font-weight: 400; 
+  color: #FFFFFFFF; /* white */
+  background: #F793B7FF; /* primary-500 */
+  opacity: 1; 
+  border: none; 
+  border-radius: 8px; /* border-l */
+}
+
+.data-form button:hover{
+  color: #FFFFFFFF; /* white */
+  background: #F46B9DFF
+}
+
+.file-input {
+  background-color: #f9fafb;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  width: 100%;
+  cursor: pointer;
+}
+  
