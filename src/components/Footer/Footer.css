@@ -1,0 +1,150 @@
+/* Footer container */
+footer {
+    background: #1D2128FF;
+    color: white;
+    min-height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Archivo", sans-serif;
+    padding-top: 45px;
+}
+  
+/* Heading */
+.head-1 {
+    padding-bottom: 18px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+  
+/* Textbox with email input and button */
+.text-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+  
+.text-box input {
+    width: 264px;
+    height: 44px;
+    padding-left: 44px;
+    padding-right: 16px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    background: transparent;
+    border-radius: 22px 0 0 22px;
+    border: 1px solid #BCC1CAFF;
+    outline: none;
+    color: white;
+}
+  
+/* Email icon */
+#email-icon {
+    position: absolute;
+    left: 16px;
+    font-size: 24px;
+    color: #BCC1CAFF;
+}
+  
+/* Subscribe button */
+.btn-typ3 {
+    padding: 0 16px;
+    height: 44px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    background: #F793B7FF;
+    color: white;
+    border: none;
+    border-radius: 0 22px 22px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+  
+.btn-typ3:hover {
+    background: rgb(244, 71, 134);
+}
+  
+.btn-typ3:active {
+    background: rgb(244, 71, 134);
+}
+  
+.btn-typ3:disabled {
+    opacity: 0.4;
+}
+  
+/* Footer navigation links */
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+  
+.nav-foot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 20px;
+    margin: 0;
+}
+  
+.nav-foot li {
+    list-style: none;
+}
+  
+.nav-foot li a {
+    text-decoration: none;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+  
+/* Horizontal line */
+footer hr {
+    width: 90%;
+    margin: 0 auto;
+    border: 0.5px solid #ccc;
+}
+  
+/* Footer bottom section */
+/* Footer bottom section */
+.foot-end {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: row; /* Keep this as row for horizontal layout */
+    justify-content: center; /* Center the tagline and icons horizontally */
+    align-items: center; /* Align them vertically in the center */
+    gap: 20px;
+}
+  
+/* Tagline (Company Name) */
+.tagline {
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    margin-right: 20px; /* Space between tagline and icons */
+}
+
+/* Social Media Icons */
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+  
+.social-media-icons img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+  
+.social-media-icons img:hover {
+    transform: scale(1.1);
+}

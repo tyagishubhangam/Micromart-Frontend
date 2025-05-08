@@ -1,15 +1,28 @@
 .homepage{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .homepage .heading{
     padding-top: 4rem;
-    width: 313px; 
+    width: 100%; 
   font-family: Montserrat; /* Heading */
   font-size: 32px; 
   line-height: 48px; 
   font-weight: 700; 
   color: #171A1FFF; /* neutral-900 */
+  text-align: center;
+}
+
+.products-catalogue{
+  display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(342px, 1fr));
+    gap: 12px;
+    padding: 20px;
+    /* justify-content: space-around; */
+    background-color: #f9f9f9;
+}
+.link-no-style{
+  text-decoration: none;
 }

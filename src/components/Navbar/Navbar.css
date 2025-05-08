@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    width: 1440px; 
+    /* width: 1440px;  */
     height: 56px; 
     background: #FFFFFFFF; /* white */
     border-radius: 0px; 
@@ -81,6 +81,9 @@ font-family: Montserrat; /* Heading */
   border-color: #F793B7FF; /* primary-500 */
   border-style: solid; 
   gap: 6px; 
+}
+.nav-right a{
+    text-decoration: none;
 }
 
 .nav-right .typ1-btn:hover {
