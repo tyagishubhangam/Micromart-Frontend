@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import axios from '../../services/axiosInstance.js';
 import "./AddProduct.css";
 import { getCategories } from '../../services/CategoryService';
 
@@ -52,7 +52,7 @@ const AddProduct = () => {
    
 
     try {
-      const response = await axios.post('http://localhost:8081/api/micromart/product/add', formData, {
+      const response = await axios.post('product/add', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

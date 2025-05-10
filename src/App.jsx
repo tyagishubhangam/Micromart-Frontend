@@ -7,6 +7,8 @@ import { SignupPage } from "./Pages/Signup/SignupPage";
 import AddProduct from "./Pages/AddProduct/AddProduct";
 import { ProductDetail } from "./Pages/ProductDetail/ProductDetail";
 import { CategoriesPage } from "./Pages/Categoriespage/CategoriesPage";
+import { LoginPage } from "./Pages/LoginPage/LoginPage";
+import { CartPage } from "./Pages/CartPage/CartPage";
 // import LoginPage from "./Pages/Login/LoginPage"; // import your login page component
 
 const App = () => {
@@ -24,9 +26,11 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/categories" element={<CategoriesPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/addProduct" element={<AddProduct />} />
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/categories/:category" element={<Home />} />
+        <Route path="/cart" element={<CartPage />} />
       </Routes>
       
       {!hideLayout && <Footer />}

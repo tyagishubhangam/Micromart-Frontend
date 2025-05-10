@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from './axiosInstance.js';
 
-const API_URL = 'http://localhost:8081/api/micromart/category/getAll';
+const API_URL = '/product/category/getAll';
 
 export const getCategories = async () => {
     try {

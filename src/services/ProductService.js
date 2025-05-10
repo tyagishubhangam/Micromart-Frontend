@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from './axiosInstance.js';
 
-const API_URL = 'http://localhost:8081/api/micromart/product/getCards';
+const API_URL = '/product/getCards';
 
 const getProducts = async (categoryName) => {
     try {
@@ -9,6 +9,7 @@ const getProducts = async (categoryName) => {
             : API_URL;
 
         const response = await axios.get(url);
+        
         return response.data;
     } catch (error) {
         console.error("Error fetching products", error);
@@ -16,20 +17,9 @@ const getProducts = async (categoryName) => {
     }
 };
 
-// const getProductsByCategory = async (categoryId)=>{
-//     try {
-//         console.log(categoryId);
-//         const response = await axios.get(`${API_URL}/${categoryId}`);
-//         console.log(response.data)
-//         return response.data;
-//     } catch (error) {
-//         console.error("Error fetching products", error);
-//         return [];
-//     }
 
-// }
 
 export{
     getProducts,
-    // getProductsByCategory
+    
 }

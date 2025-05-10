@@ -2,7 +2,9 @@ import "./ProductDetail.css"
 import React, { useEffect, useState } from 'react';
 
 import { useParams } from 'react-router';
-import axios from 'axios';
+import axios from '../../services/axiosInstance.js';
+import StarRating from "../../components/StartRating/StarRating";
+import { ReviewCard } from "../../components/ReviewCard/ReviewCard";
 
 
 const ProductDetail  =()=>{
@@ -14,7 +16,8 @@ const ProductDetail  =()=>{
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await axios.get(`http://localhost:8081/api/micromart/product/get/${id}`);
+        const res = await axios.get(`/product/get/${id}`);
+        
         setProduct(res.data);
       } catch (err) {
         setError('Product not found or error fetching');
@@ -26,7 +29,7 @@ const ProductDetail  =()=>{
 
   if (error) return <p>{error}</p>;
   if (!product) return <p>Loading...</p>;
-
+    
     return (
         <div className="product-detail-page">
             <section className="content">
@@ -49,7 +52,13 @@ const ProductDetail  =()=>{
             </div>
             </section>
             <section className="reviews">
-                <h2>Reviews</h2>
+                <h2 className="heading-1">Customer Reviews</h2>
+                
+                {
+                product.reviews.map((review, index)=>(
+                  <ReviewCard key={index} {...review} />
+                ))
+              } 
             </section>
         </div>
     )
