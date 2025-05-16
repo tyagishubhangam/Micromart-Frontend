@@ -22,7 +22,7 @@
     font-weight: 500;
     color: green;
 }
-.product-img{
+.product-detail-page .product-img{
     width: 600px; 
   height: 500px; 
   border-radius: 10px;

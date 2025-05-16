@@ -1,18 +1,31 @@
 import "./ProductDetail.css"
 import React, { useEffect, useState } from 'react';
 
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import axios from '../../services/axiosInstance.js';
 import StarRating from "../../components/StartRating/StarRating";
 import { ReviewCard } from "../../components/ReviewCard/ReviewCard";
+import { addProductToCart } from "../../services/CartService.js";
 
 
 const ProductDetail  =()=>{
+  const navigate = useNavigate();
 
     const { id } = useParams(); // grabs the :id from URL
   const [product, setProduct] = useState(null);
   const [error, setError] = useState('');
 
+  const handleAddToCart = async (productId, quantity)=>{
+    try{
+      console.log("clecked add to cart");
+      await addProductToCart(productId,quantity);
+      navigate("/cart");
+    }catch(err){
+      setError(err);
+    }
+    
+      
+  }
   useEffect(() => {
     const fetchProduct = async () => {
       try {
@@ -48,7 +61,7 @@ const ProductDetail  =()=>{
                 <p className="product-description">
                     {product.productDescription}
                 </p>
-                <button className="btn-typ4">Add To Cart</button>
+                <button className="btn-typ4" onClick={()=>handleAddToCart(product.id,1)}>Add To Cart</button>
             </div>
             </section>
             <section className="reviews">

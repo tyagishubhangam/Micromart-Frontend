@@ -1,9 +1,24 @@
 import axios from "./axiosInstance.js";
 
-const addProductToCart = async (data)=>{
+
+const addProductToCart = async (productId, quantity)=>{
     const userId = localStorage.getItem("userId");
+    const url = "/cart/addToCart"
+    try{
+        if(userId){
+            const reqBody = {
+                "userId": userId,
+                "productId" : productId,
+                "quantity": quantity
+            }
+
+            const response = await axios.post(url,reqBody);
+            console.log("addedto cart", response.data);
+        }
+    }catch(err){
+        console.error(err);
+    }
     
-    const response = await axios.post("/cart/addToCart",)
 }
 
 const getUserCart = async ()=>{

@@ -6,7 +6,7 @@ import {useState, useEffect} from "react";
 const Home = ()=>{
     const [products, setProducts] = useState([]);
     const { category } = useParams();
-    console.log(category,"hello");
+
     useEffect(() => {
         const fetchProducts = async () => {
           let productData = [];

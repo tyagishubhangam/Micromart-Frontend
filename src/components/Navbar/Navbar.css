@@ -137,3 +137,40 @@ font-family: Montserrat; /* Heading */
 .nav-right-loggedin div{
     cursor: pointer;
 }
+
+/* Dropdown container for the profile options */
+.profile-dropdown {
+  position: absolute;
+  font-family: poppins;
+  top: 45px;  /* Adjust to the correct position */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 10px;
+  z-index: 100;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.dropdown-item:hover {
+  background-color: #FCD9E6FF;
+  cursor: pointer;
+}
+.profile-dropdown button{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+}
+
+
