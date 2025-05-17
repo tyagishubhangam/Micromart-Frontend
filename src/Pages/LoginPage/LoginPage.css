@@ -103,3 +103,23 @@
   margin-bottom: 12px;
   text-align: left;
 }
+.signup-option {
+  margin-top: -8px;
+  font-size: 15px;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+.signup-option a {
+  color: #f46b9d;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 4px;
+  transition: color 0.2s ease-in-out;
+}
+
+.signup-option a:hover {
+  color: #e63978;
+  text-decoration: underline;
+}

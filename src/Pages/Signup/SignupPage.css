@@ -1,104 +1,134 @@
 .signup-page {
-    min-height: 100vh;
-    background-image: url('/bg.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* padding: 20px; */
-  }
-  
-  .signup-form{
-    margin: 0px;
-    background-color: white;
-    min-height: 100vh;;
-    display: flex;
-    flex-direction: column;
-   gap: 16px;
-    width: 720px; 
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url('/bg.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 
-    align-items: center;
-    justify-content: center;
-    
-  }
-.signup-form h2{
-    font-family: Montserrat; /* Heading */
-  font-size: 40px; 
-  line-height: 56px; 
-  font-weight: 700; 
-  color: #000000FF; 
-  }
-.signup-form p{
-    width: 480px; 
-  font-family: Poppins; /* Body */
-  font-size: 16px; 
-  line-height: 26px; 
-  font-weight: 400; 
-  color: #000000FF; /* black */
+
+
+.signup-form {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.signup-form h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.signup-form p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #555;
   text-align: center;
-}  
-
-.btn-typ4{
-    width: 480px; 
-  height: 44px; 
-  padding: 0 16px; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  font-family: Poppins; 
-  font-size: 16px; 
-  line-height: 26px; 
-  font-weight: 400; 
-  color: #FFFFFFFF; /* white */
-  background: #F793B7FF; /* primary-500 */
-  opacity: 1; 
-  border: none; 
-  border-radius: 8px; /* border-l */
-}  
-.btn-typ4:hover{
-    color: #FFFFFFFF; /* white */
-  background: #F46B9DFF; /* primary-550 */
+  margin-bottom: 16px;
 }
 
-.input-box{
-    
-    gap: 16px;
-    display: flex;
-    align-items: center;
-    width: 480px; 
-    height: 44px; 
-    padding-left: 16px; 
-    padding-right: 16px; 
-    font-family: Poppins; 
-    background: #F3F4F6FF; /* neutral-200 */
-    border-radius: 6px; /* border-m */
-    border-width: 0px; 
-    
+.input-box {
+  width: 100%;
+  background: #F3F4F6;
+  border-radius: 6px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
 }
 
-.input-box input{
-    width: 100%;
-    height: 100%;
-    background: none;
-    border: none;
-    outline: none; 
-    font-size: 16px; 
-    line-height: 26px; 
-    font-weight: 400; 
-  
+.input-box input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
 }
 
-.terms-box{
-    font-family: Poppins;
-    display: flex;
-    gap: 16px;
+.file-upload {
+  background: none;
+  padding-left: 0;
 }
 
-.login-text a{
-    font-family: Poppins; /* Body */
+.file-upload label {
+  margin-right: 12px;
+}
+
+.terms-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.btn-typ4 {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background: #F793B7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-typ4:hover {
+  background: #F46B9D;
+}
+
+.btn-typ4:disabled {
+  background: #fbbdd2;
+  cursor: not-allowed;
+}
+
+.login-text {
+  margin-top: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.login-text a {
   text-decoration: none;
+  color: #F46B9D;
+  font-weight: 500;
+}
 
-  font-weight: 400; 
-  color: #F793B7FF; 
+.message {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
 }

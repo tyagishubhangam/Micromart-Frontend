@@ -31,7 +31,7 @@ const LoginPage = () => {
       localStorage.setItem('email', data.email);
       localStorage.setItem('avatar', data.image);
 
-      navigate('/'); 
+      navigate('/');
     } catch (err) {
       setError(err.message || 'Failed to login. Please try again.');
     } finally {
@@ -74,6 +74,11 @@ const LoginPage = () => {
         <button className="btn-typ4" disabled={loading} type="submit">
           {loading ? 'Logging in...' : 'Login'}
         </button>
+
+        <div className="signup-option">
+          <span>Don't have an account? </span>
+          <a onClick={() => navigate('/signup')}>Sign up</a>
+        </div>
       </form>
     </div>
   );
