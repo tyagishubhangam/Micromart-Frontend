@@ -1,3 +1,4 @@
+import { LoginRequired } from "../../components/LoginRequiredBanner/LoginRequired.jsx";
 import { ProductInCart } from "../../components/ProductInCart/ProductInCart";
 import { getUserCart, updateQuantity } from "../../services/CartService.js";
 import { createPayment } from "../../services/PaymentService.js";
@@ -42,11 +43,9 @@ const CartPage = () => {
 
   if (!accessToken) {
     return (
-      <div className="login-required-banner">
-        <h2>Please Log In to View Your Cart</h2>
-        <p>We're excited to show you your cart — just log in first!</p>
-        <Link to="/login" className="login-btn">Login Now</Link>
-      </div>
+      <>
+      <LoginRequired loc={"cart"}/>
+      </>
     );
   }
 

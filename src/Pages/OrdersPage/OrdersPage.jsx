@@ -3,6 +3,7 @@ import { getUserOrders } from "../../services/OrderService";
 import "./OrdersPage.css";
 import { OrderItemBanner } from "../../components/OrderItemBanner/OrderItemBanner";
 import { Link } from "react-router";
+import { LoginRequired } from "../../components/LoginRequiredBanner/LoginRequired";
 
 const OrdersPage = () => {
   const [userOrders, setUserOrders] = useState([]);
@@ -30,11 +31,7 @@ const OrdersPage = () => {
 
   if (!isLoggedIn) {
     return (
-      <div className="login-required-banner">
-        <h2>Please Log In to View Your Orders</h2>
-        <p>We're excited to show you your order history — just log in first!</p>
-        <Link to="/login" className="login-btn">Login Now</Link>
-      </div>
+      <LoginRequired loc={"orders"}/>
     );
   }
 

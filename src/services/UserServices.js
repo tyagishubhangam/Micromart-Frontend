@@ -19,7 +19,7 @@ const attemptSignup = async (userData) => {
 const attemptLogin = async (credentials) => {
   try {
     const response = await axios.post('/user/login', credentials);
-    return response.data;
+    return response.data.data;
   } catch (error) {
     // Extract readable error
     const message =
@@ -42,13 +42,56 @@ const attemptLogout = () => {
 };
 
 // Function to redirect to login if session expires
-export const redirectToLogin = () => {
+const redirectToLogin = () => {
   localStorage.clear();
   window.location.replace('/login?error=sessionExpired');
 };
 
+
+//GET user profile
+const getUser = async ()=>{
+  try{
+    const resp = await axios.get("/user/get");
+    console.log(resp);
+    return resp.data.data;
+  }catch(error){
+    console.log(error);
+  }
+} 
+
+const updateUserProfile = async (data)=>{
+  try{
+     const resp = await axios.patch("/user/update",data);
+    console.log("UPDATED ",resp.data);
+  }catch(err){
+    console.log(err);
+    throw new Error("Error updating profile");
+    
+  }
+   
+}
+
+const updateProfileAvatar  = async (newImage)=>{
+  try{
+    const resp = await axios.patch("/user/update/avatar", newImage, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
+
+    return resp.data;
+  }catch(error){
+    console.log(error);
+    throw new Error("Error Uploading Image");
+  }
+}
+
 export {
   attemptSignup,
   attemptLogin,
-  attemptLogout,  // Export the logout function
+  attemptLogout, 
+  redirectToLogin,
+  getUser,
+  updateUserProfile,
+  updateProfileAvatar
 };

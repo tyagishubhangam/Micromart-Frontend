@@ -1,5 +1,5 @@
 .categories-page {
-  min-height: 100vh;
+  min-height: 50vh;
   background: linear-gradient(to right, #f9f9f9, #f0f0f0);
   padding: 40px 20px;
   display: flex;
@@ -49,4 +49,60 @@
 
 .link-no-style {
   text-decoration: none;
+}
+
+/* No categories found styles */
+
+.no-categories-container {
+  text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: #666;
+  font-family: 'Poppins', sans-serif;
+}
+
+.no-categories-icon {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.no-categories-icon .square {
+  width: 40px;
+  height: 40px;
+  background: #f793b7;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(247, 147, 183, 0.4);
+  animation: floatUp 1.5s infinite alternate;
+}
+
+.no-categories-icon .square:nth-child(2) {
+  background: #f46b9d;
+  animation-delay: 0.3s;
+}
+
+.no-categories-icon .square:nth-child(3) {
+  background: #f793b7;
+  animation-delay: 0.6s;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  to {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+.no-categories-message {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f46b9d;
+
 }

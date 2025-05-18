@@ -13,8 +13,13 @@ const CategoriesPage = () => {
 
   useEffect(() => {
     const fetchCategories = async () => {
-      const categoriesData = await getCategories();
-      setCategories(categoriesData);
+      try {
+        const categoriesData = await getCategories();
+        setCategories(categoriesData);
+      } catch (error) {
+        // optionally handle fetch error here
+        setCategories([]);
+      }
     };
 
     fetchCategories();
@@ -23,18 +28,38 @@ const CategoriesPage = () => {
   return (
     <div className="categories-page">
       <h2 className="categories-title">Explore Categories</h2>
-      <div className="category-grid">
-        {categories.map((cat, index) => (
-          <Link to={`/categories/${cat.categoryName}`} key={cat.id} className="link-no-style">
-            <div
-              className="category-card"
-              style={{ backgroundColor: getHSLColor(index, categories.length) }}
+
+      {categories.length === 0 && (
+        <div className="no-categories-container">
+          <div className="no-categories-icon" aria-hidden="true">
+            <div className="square" />
+            <div className="square" />
+            <div className="square" />
+          </div>
+          <div className="no-categories-message">
+            No categories found. Please check back later.
+          </div>
+        </div>
+      )}
+
+      {categories.length > 0 && (
+        <div className="category-grid">
+          {categories.map((cat, index) => (
+            <Link
+              to={`/categories/${cat.categoryName}`}
+              key={cat.id}
+              className="link-no-style"
             >
-              {cat.categoryName}
-            </div>
-          </Link>
-        ))}
-      </div>
+              <div
+                className="category-card"
+                style={{ backgroundColor: getHSLColor(index, categories.length) }}
+              >
+                {cat.categoryName}
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

@@ -1,17 +1,18 @@
 .homepage{
     display: flex;
     flex-direction: column;
+    padding: 40px 20px;
     /* align-items: center; */
 }
 
 .homepage .heading{
-    padding-top: 4rem;
+
     width: 100%; 
-  font-family: Montserrat; /* Heading */
-  font-size: 32px; 
-  line-height: 48px; 
-  font-weight: 700; 
-  color: #171A1FFF; /* neutral-900 */
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #333;
   text-align: center;
 }
 
@@ -19,11 +20,82 @@
   display: grid;
     grid-template-columns: repeat(auto-fill, minmax(342px, 1fr));
     gap: 12px;
-    padding: 20px;
+    padding: 10px;
     /* justify-content: space-around; */
     background-color: #f9f9f9;
 }
 .link-no-style{
   text-decoration: none;
   color:inherit
+}
+
+.status-message {
+  text-align: center;
+  padding: 24px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  color: #555;
+}
+
+.error-message {
+  text-align: center;
+  padding: 24px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #d93025; /* red error color */
+}
+
+
+.no-products-container {
+  text-align: center;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+.no-products-icon {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.no-products-icon .box {
+  width: 40px;
+  height: 40px;
+  background: #f793b7;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(247, 147, 183, 0.4);
+  animation: pulse 1.5s infinite alternate;
+}
+
+.no-products-icon .box:nth-child(2) {
+  background: #f46b9d;
+  animation-delay: 0.3s;
+}
+
+.no-products-icon .box:nth-child(3) {
+  background: #f793b7;
+  animation-delay: 0.6s;
+}
+
+@keyframes pulse {
+  from {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  to {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+.no-products-message {
+  font-size: 18px;
+  font-weight: 600;
+  color: #f46b9d;
 }

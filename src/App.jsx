@@ -13,6 +13,7 @@ import { PaymentSuccess } from "./components/PaymentSuccess/PaymentSuccess";
 import { PaymentFail } from "./components/PaymentFail/PaymentFail";
 import { OrdersPage } from "./Pages/OrdersPage/OrdersPage";
 import { OrderInfoPage } from "./Pages/OrderInfoPage/OrderInfoPage";
+import UserProfile from "./Pages/ProfilePage/UserProfile";
 // import LoginPage from "./Pages/Login/LoginPage"; // import your login page component
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/categories" element={<CategoriesPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/profile" element={<UserProfile />} />
         <Route path="/addProduct" element={<AddProduct />} />
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/categories/:category" element={<Home />} />

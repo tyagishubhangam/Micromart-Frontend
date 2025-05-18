@@ -24,13 +24,11 @@ instance.interceptors.response.use(
     const status = error.response?.status;
 
     if (status === 401 || status === 403) {
-      // Handling 403 (incorrect credentials or other access issues)
-      const errorMessage = error.response?.data?.message || 'Incorrect credentials. Please try again.';
-      return Promise.reject(new Error(errorMessage)); // pass a readable error message to the frontend
+      // Leave the original error object intact
+      return Promise.reject(error); // <--- critical change
     }
 
     return Promise.reject(error);
   }
 );
-
 export default instance;
