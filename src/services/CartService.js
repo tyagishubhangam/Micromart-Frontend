@@ -7,7 +7,7 @@ const addProductToCart = async (productId, quantity)=>{
     try{
         if(userId){
             const reqBody = {
-                "userId": userId,
+                // "userId": userId,
                 "productId" : productId,
                 "quantity": quantity
             }
@@ -22,9 +22,9 @@ const addProductToCart = async (productId, quantity)=>{
 }
 
 const getUserCart = async ()=>{
-    const userId = localStorage.getItem("userId");
-    if(userId){
-            const response = await axios.get(`/cart/user/${userId}/getCart`);
+    const accessToken = localStorage.getItem("accessToken");
+    if(accessToken){
+            const response = await axios.get(`/cart/user/getCart`);
         console.log("temp",response.data);
         return response.data;
     }else{
@@ -34,15 +34,15 @@ const getUserCart = async ()=>{
 }
 
 const updateQuantity = async (productId,quantity)=>{
-    const userId = localStorage.getItem("userId");
-    const response = await axios.put(`/cart/user/${userId}/product/${productId}/updateQuantity/${quantity}`);
+    // const userId = localStorage.getItem("userId");
+    const response = await axios.put(`/cart/user/product/${productId}/updateQuantity/${quantity}`);
     console.log("updated",response.data);
 }
 
 const deleteProductFromCart = async (productId)=>{
     try{
-        const userId = localStorage.getItem("userId");
-        const response = await axios.delete(`/cart/user/${userId}/delete/product/${productId}`);
+        // const userId = localStorage.getItem("userId");
+        const response = await axios.delete(`/cart/user/delete/product/${productId}`);
         console.log("deleted",response.data);
     }catch(err){
         console.log(err);

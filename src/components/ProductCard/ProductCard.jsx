@@ -1,4 +1,5 @@
 // import productimg from "./productimg.png";
+import StarRating from "../StartRating/StarRating";
 import "./ProductCard.css"
 const ProductCard = (props)=>{
     const{id,name, price, rating, image} = props
@@ -7,7 +8,7 @@ const ProductCard = (props)=>{
             <img src={image} alt="img" />
             <div className="product-details">
                 <p className="product-name">{name}</p>
-                <p>{rating}</p>
+                <StarRating rating={4} />
                 <p>${price}</p>
 
             </div>

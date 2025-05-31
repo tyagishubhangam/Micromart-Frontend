@@ -17,7 +17,7 @@ const ProductDetail  =()=>{
 
   const handleAddToCart = async (productId, quantity)=>{
     try{
-      console.log("clecked add to cart");
+      console.log("clicked add to cart");
       await addProductToCart(productId,quantity);
       navigate("/cart");
     }catch(err){
@@ -30,6 +30,7 @@ const ProductDetail  =()=>{
     const fetchProduct = async () => {
       try {
         const res = await axios.get(`/product/get/${id}`);
+        // console.log(res.data.reviews)
         
         setProduct(res.data);
       } catch (err) {
