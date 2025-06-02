@@ -39,6 +39,12 @@ const LoginPage = () => {
     }
   };
 
+  // Handler for Google OAuth login button
+  const handleGoogleLogin = () => {
+    // Redirect to your backend's Google OAuth login URL (adjust if needed)
+    window.location.href = 'http://localhost:8087/oauth2/authorize/google'; 
+  };
+
   return (
     <div className="login-page">
       <form className="login-form" onSubmit={handleLogin} noValidate>
@@ -74,6 +80,19 @@ const LoginPage = () => {
         <button className="btn-typ4" disabled={loading} type="submit">
           {loading ? 'Logging in...' : 'Login'}
         </button>
+
+        {/* Google OAuth login button */}
+        <button
+          type="button"
+          className="btn-typ4"
+          onClick={handleGoogleLogin}
+          id="google-btn"
+          
+        >
+            <img src="/google.png" alt="img" />
+          Login with Google
+        </button>
+
 
         <div className="signup-option">
           <span>Don't have an account? </span>

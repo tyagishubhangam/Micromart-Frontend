@@ -14,6 +14,7 @@ import { PaymentFail } from "./components/PaymentFail/PaymentFail";
 import { OrdersPage } from "./Pages/OrdersPage/OrdersPage";
 import { OrderInfoPage } from "./Pages/OrderInfoPage/OrderInfoPage";
 import UserProfile from "./Pages/ProfilePage/UserProfile";
+import OAuth2RedirectHandler from "./components/OAuthHandler/OAuth2RedirectHandler";
 // import LoginPage from "./Pages/Login/LoginPage"; // import your login page component
 
 const App = () => {
@@ -41,6 +42,8 @@ const App = () => {
         <Route path="/orders/:orderId" element={<OrderInfoPage />} />
         <Route path="/payment/success" element={<PaymentSuccess />} />
         <Route path="/payment/cancel" element={<PaymentFail />} />
+        <Route path="/oauth-success" element={<OAuth2RedirectHandler />} />
+
 
 
       </Routes>

@@ -74,7 +74,8 @@
 
 .btn-typ4 {
   width: 100%;
-  background: #f793b7;
+  background: #050505;
+;
   color: #fff;
   font-size: 18px;
   font-weight: 600;
@@ -111,7 +112,7 @@
 }
 
 .signup-option a {
-  color: #f46b9d;
+  color: #050505;
   font-weight: 600;
   cursor: pointer;
   text-decoration: none;
@@ -120,6 +121,42 @@
 }
 
 .signup-option a:hover {
-  color: #e63978;
+  color: #403f3f;
   text-decoration: underline;
+}
+.btn-google-login {
+  background-color: #4285F4; /* Google Blue */
+  color: white;
+  border: none;
+  padding: 10px 0;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.btn-google-login:hover {
+  background-color: #050505;
+; /* Darker Google Blue on hover */
+}
+
+/* Optional: Google icon styling */
+.btn-typ4 img {
+  width: 22px;
+  height: 22px;
+  fill: white;
+
+}
+
+#google-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
 }
