@@ -46,17 +46,18 @@
   font-size: 14px; 
   line-height: 22px; 
   font-weight: 400; 
-  color: #F793B7FF; /* primary-500 */
-  background: #FFFFFFFF; /* white */
+  color: white; /* primary-500 */
+  background: black; /* white */
   opacity: 1; 
   border-radius: 6px; /* border-m */
   border-width: 1px; 
-  border-color: #F793B7FF; /* primary-500 */
+  border-color: rgb(3, 3, 3); /* primary-500 */
   border-style: solid; 
+  padding: 10px;
 }
 
 .product-card button:hover{
-    color: #F46B9DFF; /* primary-550 */
+    color: rgb(28, 27, 27); /* primary-550 */
     background: #FFFFFFFF; /* white */
 }
 

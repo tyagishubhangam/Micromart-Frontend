@@ -37,7 +37,7 @@ const SignupPage = () => {
       setMessageType("error");
       return;
     }
-
+    formData.username = `${formData.firstName}"USER"${formData.lastName}`;
     const form = new FormData();
     form.append("signupRequest", new Blob(
       [JSON.stringify({ ...formData, confirmPassword: undefined })],
@@ -94,7 +94,6 @@ const SignupPage = () => {
 
         <div className="input-box"><input type="text" name="firstName" placeholder="First Name" value={formData.firstName} onChange={handleChange} required /></div>
         <div className="input-box"><input type="text" name="lastName" placeholder="Last Name" value={formData.lastName} onChange={handleChange} required /></div>
-        <div className="input-box"><input type="text" name="username" placeholder="Username" value={formData.username} onChange={handleChange} required /></div>
         <div className="input-box"><input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required /></div>
         <div className="input-box"><input type="password" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required /></div>
         <div className="input-box"><input type="password" name="confirmPassword" placeholder="Confirm Password" value={formData.confirmPassword} onChange={handleChange} required /></div>

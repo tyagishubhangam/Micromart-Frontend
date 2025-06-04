@@ -85,7 +85,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  background: #F793B7;
+  background: #000000;
   color: white;
   border: none;
   border-radius: 8px;
@@ -94,11 +94,11 @@
 }
 
 .btn-typ4:hover {
-  background: #F46B9D;
+  background-color: #050505;
 }
 
 .btn-typ4:disabled {
-  background: #fbbdd2;
+  background: #282828;
   cursor: not-allowed;
 }
 
@@ -110,7 +110,7 @@
 
 .login-text a {
   text-decoration: none;
-  color: #F46B9D;
+  color: #000000;
   font-weight: 500;
 }
 

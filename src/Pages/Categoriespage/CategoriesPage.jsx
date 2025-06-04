@@ -32,9 +32,9 @@ const CategoriesPage = () => {
       {categories.length === 0 && (
         <div className="no-categories-container">
           <div className="no-categories-icon" aria-hidden="true">
-            <div className="square" />
-            <div className="square" />
-            <div className="square" />
+            <div className="box" />
+            <div className="box" />
+            <div className="box" />
           </div>
           <div className="no-categories-message">
             No categories found. Please check back later.

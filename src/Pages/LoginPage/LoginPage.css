@@ -71,11 +71,11 @@
 .input-box input::placeholder {
   color: #999;
 }
-
+/* 
 .btn-typ4 {
   width: 100%;
   background: #050505;
-;
+
   color: #fff;
   font-size: 18px;
   font-weight: 600;
@@ -85,16 +85,13 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-family: 'Poppins', sans-serif;
-}
+} */
 
-.btn-typ4:hover:not(:disabled) {
+/* .btn-typ4:hover:not(:disabled) {
   background: #f46b9d;
-}
+} */
 
-.btn-typ4:disabled {
-  background: #f7a8b9;
-  cursor: not-allowed;
-}
+
 
 .error-message {
   color: #d93025; /* Google red */
@@ -143,7 +140,7 @@
 
 .btn-google-login:hover {
   background-color: #050505;
-; /* Darker Google Blue on hover */
+
 }
 
 /* Optional: Google icon styling */

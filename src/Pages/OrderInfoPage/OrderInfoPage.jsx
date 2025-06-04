@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router";
 import { useEffect, useState } from "react";
 import { getOrder } from "../../services/OrderService";
 import "./OrderInfoPage.css";
+import { LoginRequired } from "../../components/LoginRequiredBanner/LoginRequired";
 
 const OrderInfoPage = () => {
   const { orderId } = useParams();
@@ -32,11 +33,7 @@ const OrderInfoPage = () => {
 
   if (!isLoggedIn) {
     return (
-      <div className="login-required-banner">
-        <h2>Please Log In to View Your Orders</h2>
-        <p>We're excited to show you your order history — just log in first!</p>
-        <Link to="/login" className="login-btn">Login Now</Link>
-      </div>
+      <LoginRequired loc="order"/>
     );
   }
 

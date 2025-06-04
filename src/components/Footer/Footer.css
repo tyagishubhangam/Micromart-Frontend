@@ -1,6 +1,6 @@
 /* Footer container */
 footer {
-    background: #1D2128FF;
+    background: rgb(2, 2, 2);
     color: white;
     min-height: max-content;
     width: 100%;
@@ -58,8 +58,8 @@ footer {
     font-family: "Inter", sans-serif;
     font-size: 16px;
     line-height: 26px;
-    background: #F793B7FF;
-    color: white;
+    background: white;
+    color: black;
     border: none;
     border-radius: 0 22px 22px 0;
     cursor: pointer;
@@ -67,11 +67,12 @@ footer {
 }
   
 .btn-typ3:hover {
-    background: rgb(244, 71, 134);
+    background: rgb(244, 243, 243);
 }
   
 .btn-typ3:active {
-    background: rgb(244, 71, 134);
+    background: rgb(253, 253, 253);
+    color:#000000;
 }
   
 .btn-typ3:disabled {

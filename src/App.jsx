@@ -40,8 +40,8 @@ const App = () => {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/orders" element={<OrdersPage />} />
         <Route path="/orders/:orderId" element={<OrderInfoPage />} />
-        <Route path="/payment/success" element={<PaymentSuccess />} />
-        <Route path="/payment/cancel" element={<PaymentFail />} />
+        <Route path="/success" element={<PaymentSuccess />} />
+        <Route path="/cancel" element={<PaymentFail />} />
         <Route path="/oauth-success" element={<OAuth2RedirectHandler />} />
 
 

@@ -73,7 +73,7 @@
   line-height: 26px; 
   font-weight: 400; 
   color: #FFFFFFFF; /* white */
-  background: #F793B7FF; /* primary-500 */
+  background: black; /* primary-500 */
   opacity: 1; 
   border: none; 
   border-radius: 8px; /* border-l */
@@ -81,7 +81,7 @@
 
 .data-form button:hover{
   color: #FFFFFFFF; /* white */
-  background: #F46B9DFF
+  background: rgb(23, 23, 23)
 }
 
 .file-input {
@@ -94,3 +94,67 @@
   cursor: pointer;
 }
   
+
+.message-banner {
+  padding: 10px 15px;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.message-banner.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message-banner.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.data-form button:disabled {
+  cursor: not-allowed;
+  background: #fbcfe8; /* a lighter pink to show it's disabled */
+}
+
+.message-banner.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+/* Match select styling to inputs */
+.styled-select {
+  width: 480px;
+  height: 44px;
+  padding-left: 14px;
+  font-family: Poppins;
+  font-size: 16px;
+  background: #F3F4F6FF;
+  border-radius: 6px;
+  border-width: 0px;
+  outline: none;
+  appearance: none;
+  color: #000;
+}
+.styled-select:focus {
+  border: 1px solid #ccc;
+}
+
+/* Image preview */
+.image-preview {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.image-preview img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+

@@ -42,8 +42,8 @@ font-family: Montserrat; /* Heading */
     color: #565D6DFF; /* neutral-600 */
 }
 .nav-menu a.active {
-    color: #F793B7FF; /* Highlight color */
-    border-bottom: 2px solid #F793B7FF;
+    color: #000000; /* Highlight color */
+    border-bottom: 2px solid #000000;
     padding-bottom: 2px;
     font-weight: 600;
 }
@@ -73,12 +73,12 @@ font-family: Montserrat; /* Heading */
   font-size: 14px;  
   line-height: 22px; 
    font-weight: 400; 
-  color: #F793B7FF; /* primary-500 */
+  color: #000000; /* primary-500 */
   background: #FFFFFFFF; /* white */
   opacity: 1; 
   border-radius: 8px; /* border-l */
-  border-width: 1px; 
-  border-color: #F793B7FF; /* primary-500 */
+  border-width: 2px; 
+  border-color: #000000; /* primary-500 */
   border-style: solid; 
   gap: 6px; 
 }
@@ -87,8 +87,9 @@ font-family: Montserrat; /* Heading */
 }
 
 .nav-right .typ1-btn:hover {
-    color: #F46B9DFF; /* primary-550 */
+    color: #1e1e1e; /* primary-550 */
     background: #FFFFFFFF; /* white */
+    cursor: pointer;
 }
 
 .nav-right .typ2-btn{
@@ -103,7 +104,7 @@ font-family: Montserrat; /* Heading */
     line-height: 22px; 
     font-weight: 400; 
     color: #FFFFFFFF; /* white */
-    background: #F793B7FF; /* primary-500 */
+    background: #000000; /* primary-500 */
     opacity: 1; 
     border: none; 
     border-radius: 8px; /* border-l */
@@ -112,7 +113,8 @@ font-family: Montserrat; /* Heading */
 
 .nav-right .typ2-btn:hover {
     color: #FFFFFFFF; /* white */
-  background: #F46B9DFF; 
+  background: rgb(26, 26, 26); 
+  cursor: pointer;
 }
 
 .avatar{
@@ -162,7 +164,7 @@ font-family: Montserrat; /* Heading */
 }
 
 .dropdown-item:hover {
-  background-color: #FCD9E6FF;
+  background-color: rgb(251, 224, 234);
   cursor: pointer;
 }
 .profile-dropdown button{
