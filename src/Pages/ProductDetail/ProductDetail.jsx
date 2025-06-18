@@ -6,6 +6,7 @@ import { ReviewCard } from "../../components/ReviewCard/ReviewCard";
 import { addProductToCart } from "../../services/CartService.js";
 import { postReview } from "../../services/ReviewServices.js";
 import { getProductDetails } from "../../services/ProductService.js";
+import StarRating from "../../components/StartRating/StarRating.jsx";
 
 const ProductDetail = () => {
   const navigate = useNavigate();
@@ -87,8 +88,8 @@ const ProductDetail = () => {
         <div className="product-details">
           <div className="heading-1">{product.productName}</div>
           <p className="price">${product.price}</p>
-          <p className="rating-txt">4.5</p>
-          <div className="rating-stars">******</div>
+          <p className="rating-txt">{parseFloat(Math.round(product.rating * 10) / 10)}</p>
+          <div className="rating-stars"><StarRating rating={product.rating} /></div>
           <p className="product-description">{product.productDescription}</p>
           <button className="btn-typ4" onClick={() => handleAddToCart(product.id, 1)}>
             Add To Cart

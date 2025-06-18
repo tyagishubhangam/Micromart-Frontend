@@ -8,7 +8,7 @@ const ProductCard = (props)=>{
             <img src={image} alt="img" />
             <div className="product-details">
                 <p className="product-name">{name}</p>
-                <StarRating rating={4} />
+                <StarRating rating={rating} />
                 <p>${price}</p>
 
             </div>

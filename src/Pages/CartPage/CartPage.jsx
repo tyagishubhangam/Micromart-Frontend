@@ -95,11 +95,11 @@ const CartPage = () => {
         </div>
         <div className="summary-item">
           <span>Estimated Taxes:</span>
-          <span>$125</span>
+          <span>$0</span>
         </div>
         <div className="summary-total">
           <span>Total:</span>
-          <span>${cartAmount + 125}</span>
+          <span>${cartAmount}</span>
         </div>
         <button
           className="checkout-btn"

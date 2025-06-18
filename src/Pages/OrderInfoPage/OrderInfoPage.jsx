@@ -68,7 +68,7 @@ const OrderInfoPage = () => {
           </span>
         </p>
         <p><strong>Payment ID:</strong> {paymentId}</p>
-        <p><strong>Total Price:</strong> ₹{totalPrice}</p>
+        <p><strong>Total Price:</strong> ${totalPrice}</p>
       </div>
 
       <div className="products-container">
