@@ -87,7 +87,7 @@ const CartPage = () => {
         <h2>Summary</h2>
         <div className="summary-item">
           <span>Subtotal:</span>
-          <span>${cartAmount}</span>
+          <span>${parseFloat(Math.round(cartAmount * 10) / 10)}</span>
         </div>
         <div className="summary-item">
           <span>Estimated Delivery and Handling</span>
@@ -99,7 +99,7 @@ const CartPage = () => {
         </div>
         <div className="summary-total">
           <span>Total:</span>
-          <span>${cartAmount}</span>
+          <span>${parseFloat(Math.round(cartAmount * 10) / 10)}</span>
         </div>
         <button
           className="checkout-btn"
